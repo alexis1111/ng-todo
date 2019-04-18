@@ -1,0 +1,3 @@
+<ul class="list-unstyled">
+  <app-task-item *ngFor="let task of (taskListState | async).tasks; let i = index" [data]="task" [index]="i"></app-task-item>
+</ul>

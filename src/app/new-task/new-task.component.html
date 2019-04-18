@@ -1,0 +1,18 @@
+<form [formGroup]="taskForm" (ngSubmit)="createTask()">
+  <div class="form-row align-items-center">
+    <div class="col-lg-10 col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        id="task"
+        formControlName="task"
+        placeholder="Add the tasks here, or not, i'm just an text input"
+      />
+    </div>
+    <div class="col-lg-2 col-md-3">
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="!taskForm.valid">
+        Add
+      </button>
+    </div>
+  </div>
+</form>

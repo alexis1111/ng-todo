@@ -1,0 +1,11 @@
+<li class="task-item custom-control custom-checkbox" *ngIf="!data.completed; else taskCompletedTemplate">
+  <input type="checkbox" class="custom-control-input" [id]="index" (click)="taskCompleted()">
+  <label class="custom-control-label" [for]="index">{{data.description}}
+  </label>
+</li>
+<ng-template #taskCompletedTemplate>
+  <li class="task-item task-item--completed">
+    <button type="button" class="task-item__close-btn" (click)="deleteTask()"> &#x2715;</button>
+    {{data.description}}
+  </li>
+</ng-template>
