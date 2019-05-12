@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-
 import { AppState } from '../store/app.reducers';
 import * as TaskActions from './../store/task.actions';
 
@@ -30,5 +29,4 @@ export class NewTaskComponent implements OnInit {
       this.taskForm.setValue({task: ''});
     }
   }
-
 }
